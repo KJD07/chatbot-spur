@@ -9,6 +9,7 @@ datasource db {
 
 model Conversation {
   id        String    @id @default(cuid())
+  channel   String    @default("web")  // "web" | "whatsapp" | "instagram"
   createdAt DateTime  @default(now())
   messages  Message[]
 }

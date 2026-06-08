@@ -94,6 +94,16 @@ Browser
 
 ---
 
+### Extensibility
+
+The architecture is designed to support multiple channels (WhatsApp, Instagram, Facebook) without major changes:
+
+- **New channels** → add a new route file (e.g. `routes/whatsapp.ts`) that validates the incoming webhook, extracts the message, and calls the same `generateReply()` function from `llm.ts`.
+- **New tools/integrations** → `llm.ts` is fully encapsulated; swap models or add tool-calling without touching routes or DB logic.
+- **Channel tracking** → the `Conversation` model includes a `channel` field (`"web"` | `"whatsapp"` | `"instagram"`) so conversations are always traceable to their source.
+
+---
+
 ## LLM Notes
 
 **Provider:** [OpenRouter](https://openrouter.ai) — a single API key gives access to many models without per-provider accounts.
