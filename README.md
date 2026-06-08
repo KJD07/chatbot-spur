@@ -1,3 +1,9 @@
+## Live Demo
+- **Frontend:** https://spur-frontend-un83.onrender.com
+- **Backend:** https://spur-backend-nzv2.onrender.com/health
+
+---
+
 # Spur AI Live Chat
 
 A full-stack AI-powered customer support chat widget for Spur Store, a fictional e-commerce brand. Built as an assignment to demonstrate end-to-end product engineering with a modern TypeScript stack.
